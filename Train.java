@@ -39,8 +39,9 @@ public class Train implements TrainRequirements{
         return (nCars * seatsRemaining);
     }
 
-    public void printManifest(){
+    public String printManifest(){
         System.out.println(passengerList);
+        return passengerList.toString();
     }
 
 }
