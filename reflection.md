@@ -1,4 +1,9 @@
 Use this file to record your reflection on this assignment.
 
 What are your initial impressions of how `Unit Testing` affects your programming?
+I can totally understand why it might be helpful! That being said, my main struggles in this class are with 1. syntax 2. understanding the objectives of assignments 3. knowing what steps I should take to accomplish those objectives. Unit testing seems very helpful for people who have a better understanding of what they are doing. However right now I feel like there is a higher chance of me incorectly writing the unit tests, and digging myself an even deeper hole, than there is of me actually benefiting for the unit testing. That being said, if I were to achieve a better understanding of Object Oriented programming in the future, I see why unit tests might come in very handy.
+
 What worked, what didn't, what advice would you give someone taking this course in the future?
+I felt really lost on this assignment. I am getting some red lines under anything relating to FuelType, but I think that is because the defining of FuelType was lost somewhere in bringing A4 over to A6. Speaking of which, because my A4 wasn't perfect and polished to begin with, that made A6 quite a bit more challenging. Because of this, I found myself turning to the internet to help with some debugging. For example, I never would have thought to turn printManifest into a toString without some external research.
+
+As for the tests I implemented, I attemtped to do all 10 tests that were asked for in the README document, as detailed in the instructions. If any of the implementations test something other than what you specified in the instructions, that is error on my part.

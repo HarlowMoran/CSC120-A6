@@ -9,6 +9,7 @@ public class TrainTest {
     // Engine Tests
     private Engine myEngine = new Engine(FuelType.ELECTRIC, 10.0, 100.0);
     FuelType f = FuelType.ELECTRIC;
+
     
     @Test
     public void testEngineConstructor() {
@@ -21,7 +22,6 @@ public class TrainTest {
     }
 
     // Car Tests
-
     ArrayList<Passenger> passengerList = new ArrayList<>();
     private Car  myCar = new Car(10, 5, passengerList);
     Passenger p;
