@@ -1,8 +1,9 @@
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
-
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class TrainTest {
 
@@ -18,7 +19,8 @@ public class TrainTest {
 
     @Test
     public void testEngineGo() {
-        assertEquals(9.0, myEngine.getCurrentFuel());
+        myEngine.go();
+        assertEquals(9.0, myEngine.getCurrentFuel(), 0.0);
     }
 
     // Car Tests
@@ -55,7 +57,7 @@ public class TrainTest {
     }
 
     // Train Tests
-    private Train myTrain = new Train(ELECTRIC, 20.0, 10, 100);
+    private Train myTrain = new Train(FuelType.ELECTRIC, 100);
     int nCars;
     int i;
     @Test
@@ -79,8 +81,16 @@ public class TrainTest {
 
     @Test
     public void testTrainPrintManifest() {
-        passengerList.toString();
-        assertEquals(passengerList, myTrain.printManifest());
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        myTrain.printManifest();
+
+        String expectedOutput = passengerList.toString();
+        assertEquals(expectedOutput.trim(), outContent.toString().trim());
+
+        System.setOut(System.out);
     }
-    
+    //Note: for testTrainPrintManifest I used AI to help me debug because I couldn't figure out how to use 
+    //assertEquals when printManifest was void
 }
